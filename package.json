@@ -5,7 +5,8 @@
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "rollup -c --bundleConfigAsCjs"
+        "build": "rollup -c --bundleConfigAsCjs",
+        "serve": "http-server ./dist/ -c-1 --cors"
     },
     "keywords": [],
     "author": "",
@@ -16,6 +17,7 @@
         "@rollup/plugin-terser": "^0.4.4",
         "@rollup/plugin-typescript": "^12.1.2",
         "@types/node": "^22.13.0",
+        "http-server": "^14.1.1",
         "rollup": "^4.34.0",
         "rollup-plugin-dts": "^6.1.1",
         "rollup-plugin-peer-deps-external": "^2.2.4",
