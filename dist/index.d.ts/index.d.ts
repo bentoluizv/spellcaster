@@ -24,23 +24,24 @@ type Solana = {
   on: (t: string, cb: () => void) => void;
 };
 
-declare const isPhantomInstalled: boolean | undefined;
-declare const getProvider: () => Solana | undefined;
-declare const connect: (provider: Solana) => Promise<{
-    publicKey: any;
-} | undefined>;
+declare const connect: (provider: Solana) => Promise<string | undefined>;
+
 declare const disconnect: (provider: Solana) => Promise<void>;
 
-declare const browser_connect: typeof connect;
-declare const browser_disconnect: typeof disconnect;
-declare const browser_getProvider: typeof getProvider;
-declare const browser_isPhantomInstalled: typeof isPhantomInstalled;
-declare namespace browser {
-  export { browser_connect as connect, browser_disconnect as disconnect, browser_getProvider as getProvider, browser_isPhantomInstalled as isPhantomInstalled };
+declare const getProvider: () => Solana | undefined;
+
+declare const isPhantomInstalled: boolean | undefined;
+
+declare const index$1_connect: typeof connect;
+declare const index$1_disconnect: typeof disconnect;
+declare const index$1_getProvider: typeof getProvider;
+declare const index$1_isPhantomInstalled: typeof isPhantomInstalled;
+declare namespace index$1 {
+  export { index$1_connect as connect, index$1_disconnect as disconnect, index$1_getProvider as getProvider, index$1_isPhantomInstalled as isPhantomInstalled };
 }
 
-declare namespace node {
+declare namespace index {
   export {  };
 }
 
-export { browser, node };
+export { index$1 as browser, index as node };
