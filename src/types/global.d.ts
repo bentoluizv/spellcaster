@@ -6,5 +6,3 @@ declare global {
     phantom?: Phantom;
   }
 }
-
-// filepath: /home/bentoluizv/Work/spellcaster/src/global.d.ts
