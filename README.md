@@ -1,4 +1,4 @@
-# Solana Phantom SDK Documentation
+# Spellcaster Core
 
 ## Introduction
 
